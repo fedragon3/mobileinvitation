@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>카카오톡 버튼있는 메시지 전송하기</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요</strong> By. Blackcats4567</p>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('eb416405ee468671b5bb9dccc9a21dbc');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '경범♥지은 결혼합니다',
+        description: '2022.01.08(토) 오후 3:30 지타워컨벤션 2층',
+        imageUrl:
+          'https://creazilla-store.fra1.digitaloceanspaces.com/emojis/54130/growing-heart-emoji-clipart-xl.png',
+        link: {
+          mobileWebUrl: 'https://barunsonmcard.com',
+          webUrl: 'https://barunsonmcard.com',
+        },
+      },
+      buttons: [
+        {
+          title: '설문조사',
+          link: {
+            mobileWebUrl: 'http://naver.me/592p9b32',
+            webUrl: 'http://naver.me/592p9b32',
+          },
+        },
+      ],
+       buttons: [
+        {
+          title: '모바일 청첩장 보러가기',
+          link: {
+            mobileWebUrl: 'https://barunsonmcard.com/m/220108_330pm',
+            webUrl: 'https://barunsonmcard.com/m/220108_330pm',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!-- www.blackcats4567.com -->
+<!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
+  </body>
+</html>
